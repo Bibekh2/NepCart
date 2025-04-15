@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NepCart | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo-title">
+        <img src="images/logo.png" alt="NepCart Logo" class="logo" />
+        <h1>NepCart</h1>
+      </div>
+      <div class="top-right-auth">
+        <a href="components/login/login.html">Login</a>
+        <a href="components/signup/signup.html">Sign Up</a>
+      </div>
+    </div>
+
+    <div class="nav-bar">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="components/about/about Us.html">About</a>
+        <a href="components/categories/categories.html">Categories</a>
+        <a href="components/contact/contact.html">Contact</a>
+      </nav>
+      <form class="search-form" onsubmit="searchProduct(); return false;">
+        <input type="text" id="searchInput" placeholder="Search NepCart..." />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- ✅ Category Navigation -->
+  <nav class="category-wrapper">
+    <div class="mobile-toggle" onclick="toggleMenu()">☰ Categories</div>
+    <ul class="category-nav" id="categoryMenu">
+      <li><a href="#">Electronics <span class="arrow">&#9662;</span></a></li>
+      <li><a href="#">TVs & Appliances <span class="arrow">&#9662;</span></a></li>
+      <li class="dropdown">
+        <a href="#">Men <span class="arrow">&#9662;</span></a>
+        <ul class="dropdown-menu">
+          <li class="sub-dropdown">
+            <a href="#">Footwear &#9656;</a>
+            <ul class="sub-dropdown-menu">
+              <li><a href="#">Sports Shoes</a></li>
+              <li><a href="#">Casual Shoes</a></li>
+              <li><a href="#">Formal Shoes</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Women <span class="arrow">&#9662;</span></a></li>
+      <li><a href="#">Home & Furniture <span class="arrow">&#9662;</span></a></li>
+      
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Men's Footwear</h2>
+    <div class="product-gallery">
+
+      <!-- Brown Loafers -->
+      <div class="product">
+        <img
+          src="images/brown-loafers-1.jpg.webp"
+          alt="Brown Loafers"
+          class="rotating-image"
+          data-images='[
+            "images/brown-loafers-1.jpg.webp",
+            "images/brown-loafers-2.jpg.webp",
+            "images/brown-loafers-3.jpg.webp"
+          ]'
+        />
+        <h3>Casual PVC Waterproof Loafers</h3>
+        <p>Size: 8 | Color: Brown</p>
+        <p class="price special">₹348 (Special Price)</p>
+      </div>
+
+      <!-- Outdoor White Sneakers -->
+      <div class="product">
+        <img
+          src="images/Outdoor Sneakers.jpg.webp"
+          alt="Outdoor Sneakers"
+          class="rotating-image"
+          data-images='[
+            "images/Outdoor Sneakers.jpg.webp",
+            "images/Outdoor Sneakers2.jpg.webp",
+            "images/Outdoor Sneakers3.jpg.webp"
+          ]'
+        />
+        <h3>Trending Stylish Casual Outdoor Sneakers</h3>
+        <p>Size: 8 | Color: White, Black</p>
+        <p class="price special">₹358 (Special Price)</p>
+      </div>
+
+      <!-- Blue Sneakers -->
+      <div class="product">
+        <img src="images/blue-sneakers-1.jpg.webp" alt="Blue Sneakers" />
+        <h3>Pop Sneaker Shoes for Men</h3>
+        <p>Size: 8 | Color: Blue</p>
+        <p class="price special">₹1,804 (Special Price)</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 NepCart. All Rights Reserved.</p>
+    <p>Contact: Bibek Gupta | +977 9825395584</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
