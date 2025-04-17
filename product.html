@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <header>
+    <h2>Product Details</h2>
+  </header>
+
+  <main id="product-detail" class="product-detail-container">
+    <!-- Content will be injected here -->
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get("id");
+
+    fetch("products.json")
+      .then((res) => res.json())
+      .then((products) => {
+        const product = products[productId];
+        const container = document.getElementById("product-detail");
+
+        if (!product) {
+          container.innerHTML = "<p>Product not found.</p>";
+          return;
+        }
+
+        const thumbnails = product.images.map(
+          (img) => `<img src="${img}" class="thumbnail" onclick="document.getElementById('mainImage').src='${img}'" />`
+        ).join("");
+
+        container.innerHTML = `
+          <div class="gallery-column">${thumbnails}</div>
+          <div class="main-image-column">
+            <img src="${product.images[0]}" id="mainImage" class="main-image" />
+          </div>
+          <div class="product-info">
+            <h3>${product.name}</h3>
+            <p>Size: ${product.size} | Color: ${product.color}</p>
+            <p class="price special">${product.price}</p>
+            <div>${product.description}</div>
+            <button class="add-to-cart-btn" onclick="addToCart('${productId}')">Add to Cart</button>
+          </div>
+        `;
+      });
+
+    function addToCart(productId) {
+      alert(`Added ${productId} to cart!`);
+      // Optional: Store in localStorage or sessionStorage
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+{
+    "urbanbox": {
+      "name": "URBANBOX Sneakers For Men",
+      "price": "₹369 (Special Price)",
+      "size": "9",
+      "color": "White, Black",
+      "description": "Comfortable everyday sneakers with street style look.",
+      "images": [
+        "images/Sneakers For Men.jpg",
+        "images/Sneakers For Men 2.jpg",
+        "images/Sneakers For Men 3.jpg"
+      ]
+    },
+  
+    "killer-grey": {
+      "name": "KILLER SABER D.GREY Walking Shoes",
+      "price": "₹685 (Special Price)",
+      "size": "8",
+      "color": "Grey",
+      "description": "Comfortable Knitted | Lightweight Walking Shoe | Phylon Sole",
+      "images": [
+        "images/SABER D.GREY Walking Shoes For Men.jpg",
+        "images/SABER D.GREY Walking Shoes For Men2.jpg",
+        "images/SABER D.GREY Walking Shoes For Men3.jpg",
+        "images/SABER D.GREY Walking Shoes For Men4.jpg",
+        "images/SABER D.GREY Walking Shoes For Men5.jpg"
+      ]
+    },
+  
+    "brown-loafers": {
+      "name": "Casual PVC Waterproof Loafers",
+      "price": "₹348 (Special Price)",
+      "size": "8",
+      "color": "Brown",
+      "description": "These casual loafers are made with waterproof PVC material, perfect for all-weather wear. Material: Waterproof PVC, Slip-on design, Cushioned insole, Non-slip sole.",
+      "images": [
+        "images/brown-loafers-1.jpg.webp",
+        "images/brown-loafers-2.jpg.webp",
+        "images/brown-loafers-3.jpg.webp"
+      ]
+    },
+  
+    "outdoor-sneakers": {
+      "name": "Trending Stylish Casual Outdoor Sneakers",
+      "price": "₹358 (Special Price)",
+      "size": "8",
+      "color": "White, Black",
+      "description": "Stylish and breathable sneakers perfect for outdoor wear.",
+      "images": [
+        "images/Outdoor Sneakers.jpg.webp",
+        "images/Outdoor Sneakers2.jpg.webp",
+        "images/Outdoor Sneakers3.jpg.webp"
+      ]
+    },
+  
+    "trendy-sports": {
+      "name": "Trendy Sports Running Shoes For Men",
+      "price": "₹348 (Special Price)",
+      "size": "6, 7, 8, 9, 10",
+      "color": "Blue, Orange",
+      "description": "High performance running shoes with cushioned soles.",
+      "images": [
+        "images/Trendy Sports1.jpg.webp",
+        "images/Trendy Sports2.jpg.webp",
+        "images/Trendy-Sports3.webp"
+      ]
+    }
+  }

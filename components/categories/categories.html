@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Categories | NepCart</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+
+    .toggle {
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+      margin: 5px 0;
+    }
+
+    .nested {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .product-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .product {
+      width: 250px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .product-title {
+      font-weight: bold;
+      margin: 10px 0 5px;
+    }
+
+    .product-price {
+      color: red;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .product-old-price {
+      text-decoration: line-through;
+      color: #777;
+      margin-left: 8px;
+      font-size: 13px;
+    }
+
+    .product-discount {
+      color: green;
+      font-size: 13px;
+      margin-left: 5px;
+    }
+
+    .product-sizes {
+      font-size: 13px;
+      color: #555;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Product Categories</h2>
+
+  <ul>
+    <li>
+      <span class="toggle" onclick="toggle(this)">Footwear</span>
+      <ul class="nested">
+        <li>
+          <span class="toggle" onclick="toggle(this)">Men's Footwear</span>
+          <ul class="nested">
+            <li>
+              <span class="toggle" onclick="toggle(this)">Men's Sports Shoes</span>
+              <ul class="nested">
+                <li>
+                  <!-- Product Gallery START -->
+                  <div class="product-gallery">
+                    <div class="product">
+                      <img src="../../images/Trendy Sports1.webp" alt="Running Shoe 1" />
+                      <p class="product-title">Trendy Sports Running Shoes</p>
+                      <p>Color: Blue, Orange</p>
+                      <p class="product-price">₹348
+                        <span class="product-old-price">₹1,299</span>
+                        <span class="product-discount">73% off</span>
+                      </p>
+                      <p class="product-sizes">Size: UK/India 6, 7, 8, 9, 10</p>
+                    </div>
+
+                    <div class="product">
+                      <img src="../../images/Trendy Sports2.webp" alt="Running Shoe 2" />
+                      <p class="product-title">Trendy Sports Running Shoes</p>
+                      <p>Color: Blue, Orange</p>
+                      <p class="product-price">₹348
+                        <span class="product-old-price">₹1,299</span>
+                        <span class="product-discount">73% off</span>
+                      </p>
+                      <p class="product-sizes">Size: UK/India 6, 7, 8, 9, 10</p>
+                    </div>
+
+                    <div class="product">
+                      <img src="../../images/Trendy Sports3.webp" alt="Running Shoe 3" />
+                      <p class="product-title">Trendy Sports Running Shoes</p>
+                      <p>Color: Blue, Orange</p>
+                      <p class="product-price">₹348
+                        <span class="product-old-price">₹1,299</span>
+                        <span class="product-discount">73% off</span>
+                      </p>
+                      <p class="product-sizes">Size: UK/India 6, 7, 8, 9, 10</p>
+                    </div>
+                  </div>
+                  <!-- Product Gallery END -->
+                </li>
+              </ul>
+            </li>
+            <li>Men's Casual Shoes</li>
+            <li>Men's Formal Shoes</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Accessories</li>
+    <li>TVs & Appliances</li>
+  </ul>
+
+  <script>
+    function toggle(el) {
+      const next = el.nextElementSibling;
+      if (next && next.classList.contains("nested")) {
+        next.classList.toggle("active");
+      }
+    }
+  </script>
+
+</body>
+</html>
